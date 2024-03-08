@@ -96,7 +96,7 @@ RUN --mount=type=cache,target=/root/.cache/pip,id=pip-cahce-$TARGETARCH$TARGETVA
     <<EOS
 set -ex
 python3 -m venv .venv
-CC=gcc .venv/bin/pip3 install --compile --no-cache-dir flask gunicorn idna psutil requests
+CC=gcc .venv/bin/pip3 install --compile --no-cache-dir flask gunicorn idna psutil requests bs4
 .venv/bin/pip3 install *.whl
 EOS
 
